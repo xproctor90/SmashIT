@@ -1,2 +1,2 @@
 # SmashIT
-Some Text
+Some Text Cory
