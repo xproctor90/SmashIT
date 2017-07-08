@@ -10,12 +10,27 @@ var suits = [ "hearts", "diamonds", "clubs", "spades" ];
 var ranks = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A" ];
 
 var deck = [];
+var myLevel = []
 
 
+//create buttons based on var level into HTML
+
+
+
+//button to chose level
+//function level(){
+//	$("#levelbtn").click( function() {
+//		easy = myLevel
+//		medium = myLevel
+//		hard = myLevel
+}
+
+
+// iniates deck and calls function to create deck
 $(init);
 function init() {
 	makeDeck();
-  	//need to match drawbtn with button on site for exercise
+  	//need to match "#drawbtn" with button on site for exercise
   	$("#drawbtn").click( function() {
     	var myCard = drawCard();
     	if( myCard ) {
@@ -26,12 +41,12 @@ function init() {
 	    }    
   	});
 }
-
+//function to create deck from suits and rank
 function makeDeck() {  
 	deck = [];
 	//for each type of suit
 	for( var i = 0; i < suits.length; i++ ) {
-    //and for each rank
+    // for each rank, need to match this to the number of cards based on easy=13/medium=26/hard=52
     for( var j = 0; j < ranks.length; j++ ) {  
     //make a card
     var card = {};
@@ -43,7 +58,9 @@ function makeDeck() {
   
 	console.log( "MADE A NEW DECK OF ", deck.length, " CARDS" );
 	console.log( deck );
+	return deck
 }
+
 
 function drawCard() {
 	var card;
@@ -54,6 +71,8 @@ function drawCard() {
   return card;
 }
 
+
+//if hard
 function makeCard( suit, rank ) {
 	var card = $(".card.template").clone();
 	card.removeClass("template");
@@ -65,7 +84,42 @@ function makeCard( suit, rank ) {
 	}
 	$("body").append(card);
 		}
+
+function smallerDeck(arr, n) {
+    var result = new Array(n),
+        len = arr.length,
+        taken = new Array(len);
+    if (n > len)
+        throw new RangeError("getRandom: more elements taken than available");
+    while (n--) {
+        var x = Math.floor(Math.random() * len);
+        result[n] = arr[x in taken ? taken[x] : x];
+        taken[x] = --len;
+    }
+    return result;
 }
+deck = makeDeck()
+console.log(deck)
+
+//if (myLevel === easy)
+//	(smallerDeck(deck, 13))
+console.log(smallerDeck(deck, 13))
+
+
+//if (myLevel === medium)
+//	(smallerDeck(deck, 26))
+//console.log(smallerDeck(deck, 26))
+
+//else
+
+
+
+
+//if medium (smallerDeck(deck, 26))
+
+
+
+
 
 //3 buttons easy, medium hard
 
