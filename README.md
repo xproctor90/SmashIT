@@ -1,3 +1,6 @@
 # SmashIT
-Some Text
-some more text
+Some Text Cory
+
+
+MORE TEXT
+
