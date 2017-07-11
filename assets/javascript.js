@@ -1,16 +1,25 @@
 var level = ["easy", "medium", "hard"]
 var muscleGroup = ["upper", "lower", "core", "all", "cardio"]
-var coreExercise = ["sit-ups", "toe touches", "Russion twist", "v-ups", "plank"]
-var cardioExercise = ["burpees", "mountain climbers", "skier jumps", "tuck jumps", "up downs"]
-var upperExercise = ["push ups", "triceps on chair", "plank to push", "diamond push ups", "inchworm push ups"]
-var lowerExercise = ["squats", "lunges", "calf raises", "curtsy lunges", "hip raises", "single leg hip raises", "fire hydrant circuit"]
+var exercises = {
+	coreExercise: ['sit-ups', 'toe touches', 'Russion twist', 'v-ups', 'plank'],
+	cardioExercise: ['burpees', 'mountain climbers', 'skier jumps', 'tuck jumps', 'up downs'],
+	upperExercise: ['push ups', 'triceps on chair', 'plank to push', 'diamond push ups', 'inchworm push ups'],
+	lowerExercise: ['squats', 'lunges', 'calf raises', 'curtsy lunges', 'hip raises', 'single leg hip raises', 'fire hydrant circuit'],
+	fullExercise: ['sit-ups', 'toe touches', 'Russion twist', 'v-ups', 'plank', 'burpees', 'mountain climbers', 'skier jumps', 'tuck jumps', 'up downs', 'push ups', 'triceps on chair', 'plank to push', 'diamond push ups', 'inchworm push ups', 'squats', 'lunges', 'calf raises', 'curtsy lunges', 'hip raises', 'single leg hip raises', 'fire hydrant circuit'],
+	}
+
+
+//var coreExercise = ["sit-ups", "toe touches", "Russion twist", "v-ups", "plank"]
+//var cardioExercise = ["burpees", "mountain climbers", "skier jumps", "tuck jumps", "up downs"]
+//var upperExercise = ["push ups", "triceps on chair", "plank to push", "diamond push ups", "inchworm push ups"]
+//var lowerExercise = ["squats", "lunges", "calf raises", "curtsy lunges", "hip raises", "single leg hip raises", "fire hydrant circuit"]
 var music = []
 var repititions = []
 var suits = [ "hearts", "diamonds", "clubs", "spades" ];
 var ranks = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A" ];
 
 var deck = [];
-var myLevel = []
+var myLevel = [];
 
 
 //create buttons based on var level into HTML
@@ -23,7 +32,7 @@ var myLevel = []
 //		easy = myLevel
 //		medium = myLevel
 //		hard = myLevel
-}
+
 
 
 // iniates deck and calls function to create deck
@@ -98,19 +107,33 @@ function smallerDeck(arr, n) {
     }
     return result;
 }
+
+
 deck = makeDeck()
 console.log(deck)
+
+//if myLevel===hard then
+//then nothing?
 
 //if (myLevel === easy)
 //	(smallerDeck(deck, 13))
 console.log(smallerDeck(deck, 13))
 
-
 //if (myLevel === medium)
 //	(smallerDeck(deck, 26))
-//console.log(smallerDeck(deck, 26))
+console.log(smallerDeck(deck, 26))
 
 //else
+
+function Card (index, eidx, exercise){
+	this.index = index
+	this.exercise = excercises[exercise][eidx]
+}
+
+
+var card1 = new Card (0,'coreExercise',0)
+card1.index(deck[card1.index])
+console.log(Card)
 
 
 
