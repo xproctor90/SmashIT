@@ -1,0 +1,49 @@
+Project Title: Smash It
+
+
+
+
+Team Members
+
+: Cory, Adrian, Xavier, Kevin
+
+Project Description: A work-out app that makes exercise easy, fun, and straigth foward. Smash It is designed to be used anywhere, from the home to the hotel, and doesn't require any additional equipment. 
+
+At the beginning of the workout, a user chooses from several options:
+
+1) Workout Level: Easy, Medium, Hard, Super Hero
+2) (Muscle Group: Upper Body, Lower Body, Core, Cardio)
+3) Music: Artist or Song Title
+
+After information is entered, work out music is then played. A deck of cards is then used to pick the exercise and number of repitions. With each draw of a card, an exercise is pulled represented by suit, and then the card rank indicates the number of repitions to perform. Cards are continually drawn until a turn is completed, indicating the end of the work out. 
+
+A score is tallied, which is then recorded in Firebase. 
+
+
+
+
+Sketch of Final Product
+
+APIs to be Used
+:
+
+1) YouTube API to display video of the workout to be performed. 
+2) Spotify API to be used to pull a playlist for the workout. 
+
+
+Rough Breakdown of Tasks:
+
+1) Design site layout and wireframe
+2) Code site template in Bootstrap
+3) Create Variables to be used, including exercise strings
+4) JS to create formulas around using variables and corresponding cards
+5) Create card imagery for display of cards
+6) Insert YouTube API
+7) Insert Spotify API
+8) Insert Instagram or social post about workout
+
+
+
+
+
+

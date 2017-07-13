@@ -1,17 +1,17 @@
+
+$(document).ready(function() {
+
+$(".two").hide();  
+$(".three").hide();  
+var finalExercise = [];
+
+
 var cardAmount;
 var firstExercise;
 var secondExercise;
 var thirdExercise;
 var fourthExercise;
 var counter = 0;
-
-$(document).ready(function() {
-
-$(".two").hide();  
-$(".three").hide();  
-var exerciseSuits = {hearts:"", clubs:"",diams:"", spades:""};
-var finalExercise = [];
-
 
 	document.getElementById("startButtonOne").onclick = function() {startButtonOneFunction()};
   	function startButtonOneFunction() {
@@ -61,8 +61,6 @@ var finalExercise = [];
   			
   		}
 
-
-
   		document.getElementById("exerciseThree").innerHTML = "Plank To Push"
   		document.getElementById("exerciseThree").onclick = function() {exerciseThreeFunction()};
   		function exerciseThreeFunction(){
@@ -108,9 +106,6 @@ var finalExercise = [];
   		document.getElementById("exerciseTfour").innerHTML = "Curtsy Lunges"  
 
     }
-
-
-
 
     document.getElementById("upperBody").onclick = function() {upperBodyFunction()};
   	function upperBodyFunction() {
@@ -167,9 +162,6 @@ var finalExercise = [];
   		document.getElementById("exerciseSix").innerHTML = "Up-Downs"  
     	// burpee's, //
     }
-
-
-
 
 
 document.getElementById("situpBody").onclick = function() {situpBodyFunction()};

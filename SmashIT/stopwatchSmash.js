@@ -29,14 +29,13 @@ var stopwatch = {
 
   stop: function() {
     clearInterval(counter);
-    console.log(stopwatch.time);
-    console.log(cardAmount);
     clockRunning = false;
   },
   
   count: function() {
     stopwatch.time++;
     var converted = stopwatch.timeConverter(stopwatch.time);
+    console.log(converted);
     $("#display").html(converted);
   },
 
@@ -56,11 +55,6 @@ var stopwatch = {
     }
 
     return minutes + ":" + seconds;
-
-  },
-
-  returnSeconds: function (t) {
-    return t;
   }
 };
 
