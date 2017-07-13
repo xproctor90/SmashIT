@@ -1,4 +1,4 @@
-// This code will run as soon as the page loads
+var clockRunning = false;
 window.onload = function() {
 
   $("#stop").on("click", stopwatch.stop);      // uses on click to stop workout
@@ -8,8 +8,6 @@ window.onload = function() {
 
 
 var counter;
-
-var clockRunning = false;
 
 var stopwatch = {
 
