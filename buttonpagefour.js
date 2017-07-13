@@ -1,38 +1,52 @@
+
 var cardAmount;
+
+$(document).ready(function() {
+
+$(".two").hide();  
+$(".model").hide();  
+$(".three").hide();  
+$(".four").hide(); 
+
+
+var finalExercise = [];
 var firstExercise;
 var secondExercise;
 var thirdExercise;
 var fourthExercise;
 var counter = 0;
 
-$(document).ready(function() {
-
-$(".two").hide();  
-$(".three").hide();  
-var exerciseSuits = {hearts:"", clubs:"",diams:"", spades:""};
-var finalExercise = [];
-
-
 	document.getElementById("startButtonOne").onclick = function() {startButtonOneFunction()};
   	function startButtonOneFunction() {
-    	$(".one").hide();   
-    	$(".two").show();
+    	$(".one").hide(); 
+      $(".model").show();  
     	cardAmount = 0;
 	}
 
 	document.getElementById("startButtonTwo").onclick = function() {startButtonTwoFunction()};
   	function startButtonTwoFunction() {
     	$(".one").hide();
-    	$(".two").show();   
+    	$(".model").show();   
     	cardAmount = 26;
     }
 
     document.getElementById("startButtonThree").onclick = function() {startButtonThreeFunction()};
   	function startButtonThreeFunction() {
     	$(".one").hide();
-    	$(".two").show();   
+      $(".model").show();  
     	cardAmount = 39;
     }
+
+
+    document.getElementById("xavierButton").onclick = function() {xavierButtonFunction()};
+    function xavierButtonFunction() {
+
+       alert("This does work");
+       $(".two").show(); 
+
+      
+    }
+
 
     document.getElementById("fullBody").onclick = function() {fullBodyFunction()};
   	function fullBodyFunction() {
@@ -47,8 +61,10 @@ var finalExercise = [];
   			console.log(finalExercise);
   			counter++;
   			console.log(counter);
-
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show(); }
   		}
+
   		document.getElementById("exerciseTwo").innerHTML = "Tuck Jumps"
   		document.getElementById("exerciseTwo").onclick = function() {exerciseTwoFunction()};
   		function exerciseTwoFunction(){
@@ -58,10 +74,9 @@ var finalExercise = [];
   			console.log(finalExercise);
   			counter++;
   			console.log(counter);
-  			
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+  			 if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
   		}
-
-
 
   		document.getElementById("exerciseThree").innerHTML = "Plank To Push"
   		document.getElementById("exerciseThree").onclick = function() {exerciseThreeFunction()};
@@ -72,7 +87,8 @@ var finalExercise = [];
   			console.log(finalExercise);
   			counter++;
   			console.log(counter);
-  			
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+  			 if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
   		}	
 
   		document.getElementById("exerciseFour").innerHTML = "Burpees"
@@ -84,9 +100,22 @@ var finalExercise = [];
   			console.log(finalExercise);
   			counter++;
   			console.log(counter);
-  			
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+  			 if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
   	}	
   		document.getElementById("exerciseFive").innerHTML = "Single Leg Raises"
+      document.getElementById("exerciseFive").onclick = function() {exerciseFiveFunction()};
+      function exerciseFiveFunction(){
+        var exercise = "Single Leg Raises"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+
+    }
   		document.getElementById("exerciseSix").innerHTML = "V-Ups"
   		document.getElementById("exerciseSeven").innerHTML = "Inchworms"
   		document.getElementById("exerciseEight").innerHTML = "Squats"
@@ -105,11 +134,10 @@ var finalExercise = [];
   		document.getElementById("exerciseTone").innerHTML = "Mountain Climbers"
   		document.getElementById("exerciseTtwo").innerHTML = "Lunges"
   		document.getElementById("exerciseTthree").innerHTML = "Hip Raises"
-  		document.getElementById("exerciseTfour").innerHTML = "Curtsy Lunges"  
+  		document.getElementById("exerciseTfour").innerHTML = "Curtsy Lunges"
+     
 
     }
-
-
 
 
     document.getElementById("upperBody").onclick = function() {upperBodyFunction()};
@@ -169,9 +197,6 @@ var finalExercise = [];
     }
 
 
-
-
-
 document.getElementById("situpBody").onclick = function() {situpBodyFunction()};
   	function situpBodyFunction() {
   		$(".two").hide();  
@@ -184,7 +209,6 @@ document.getElementById("startWorkout").onclick = function() {startWorkoutFuncti
   		document.getElementById("startWorkout").innerHTML = "Next Exercise"
   		$(".finalText").hide();  
     }
-
 
 var suits = [ "hearts", "diams", "clubs", "spades" ];
 var ranks = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A" ];
@@ -204,9 +228,13 @@ function init() {
     
     if( myCard ) {
       makeCard( myCard.suit, myCard.rank );
-    } else {
-      alert("You Have Completed Your Workout!");
-    }
+    } else { $("#startWorkout").hide(); 
+            $("#stop").show();
+            $("#pause").hide();
+            $("#textInfoTwo").hide();
+            $("#cardHere").hide();
+            $("#textInfo").html("You Smashed IT!!");
+              } // to close else
     
   });
   
@@ -286,5 +314,3 @@ function makeCard( suit, rank ) {
 
 
 }); 
-
-
