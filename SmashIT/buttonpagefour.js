@@ -2,9 +2,11 @@
 $(document).ready(function() {
 
 $(".two").hide();  
-$(".three").hide();  
-var finalExercise = [];
+$(".three").hide();
 
+
+var exerciseSuits = {hearts:"", clubs:"",diams:"", spades:""};
+var finalExercise = [];
 
 var cardAmount;
 var firstExercise;
@@ -12,6 +14,7 @@ var secondExercise;
 var thirdExercise;
 var fourthExercise;
 var counter = 0;
+
 
 	document.getElementById("startButtonOne").onclick = function() {startButtonOneFunction()};
   	function startButtonOneFunction() {
@@ -34,21 +37,29 @@ var counter = 0;
     	cardAmount = 39;
     }
 
-    document.getElementById("fullBody").onclick = function() {fullBodyFunction()};
-  	function fullBodyFunction() {
-  		$(".two").hide(); 
-  		$(".three").show();
-  		document.getElementById("exerciseOne").innerHTML = "Sit-Ups"
-  		document.getElementById("exerciseOne").onclick = function() {exerciseOneFunction()};
-  		function exerciseOneFunction(){
+  document.getElementById("fullBody").onclick = function() {fullBodyFunction()};
+  	 function fullBodyFunction() {
+  		  $(".two").hide(); 
+  		  $(".three").show();
+  		  
+        document.getElementById("exerciseOne").innerHTML = "Sit-Ups"
+  		  document.getElementById("exerciseOne").onclick = function() {exerciseOneFunction()};
+  		  function exerciseOneFunction(){
   			var exercise = "Sit-Ups"
   			finalExercise.push(exercise);
   			console.log(exercise);
   			console.log(finalExercise);
   			counter++;
   			console.log(counter);
+       
+      }
 
-  		}
+//if (finalExercise.length >= 3) {
+  //           $(".three").hide();
+    //         $(".four").show();
+      //      alert("That's 4");   
+        //    }
+
   		document.getElementById("exerciseTwo").innerHTML = "Tuck Jumps"
   		document.getElementById("exerciseTwo").onclick = function() {exerciseTwoFunction()};
   		function exerciseTwoFunction(){
@@ -82,29 +93,217 @@ var counter = 0;
   			console.log(finalExercise);
   			counter++;
   			console.log(counter);
-  			
   	}	
   		document.getElementById("exerciseFive").innerHTML = "Single Leg Raises"
-  		document.getElementById("exerciseSix").innerHTML = "V-Ups"
-  		document.getElementById("exerciseSeven").innerHTML = "Inchworms"
-  		document.getElementById("exerciseEight").innerHTML = "Squats"
-  		document.getElementById("exerciseNine").innerHTML = "Russian Twist"
-  		document.getElementById("exerciseTen").innerHTML = "Toe Touches"
-  		document.getElementById("exerciseEleven").innerHTML = "Single Leg Raises"
-  		document.getElementById("exerciseTwelve").innerHTML = "Push-Ups"
-  		document.getElementById("exerciseThirteen").innerHTML = "Triceps On Chair"
-  		document.getElementById("exerciseFourteen").innerHTML = "Plank"
-  		document.getElementById("exerciseFifteen").innerHTML = "Fire Hyrant"
-  		document.getElementById("exerciseSixteen").innerHTML = "Diamond Push-Up"
-  		document.getElementById("exerciseSeventeen").innerHTML = "Calf Raises"
-  		document.getElementById("exerciseEighteen").innerHTML = "Up-Downs"
-  		document.getElementById("exerciseNineteen").innerHTML = "Hip Raises"
-  		document.getElementById("exerciseTwenty").innerHTML = "Skier Jumps"
-  		document.getElementById("exerciseTone").innerHTML = "Mountain Climbers"
-  		document.getElementById("exerciseTtwo").innerHTML = "Lunges"
-  		document.getElementById("exerciseTthree").innerHTML = "Hip Raises"
-  		document.getElementById("exerciseTfour").innerHTML = "Curtsy Lunges"  
+      document.getElementById("exerciseFive").onclick = function() {exerciseFiveFunction()};
+      function exerciseFiveFunction(){
+        var exercise = "Single Leg Raises"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+    } 
 
+  		document.getElementById("exerciseSix").innerHTML = "V-Ups"
+      document.getElementById("exerciseSix").onclick = function() {exerciseSixFunction()};
+      function exerciseSixFunction(){
+        var exercise = "V-Ups"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+ 
+  		document.getElementById("exerciseSeven").innerHTML = "Inchworms"
+      document.getElementById("exerciseSeven").onclick = function() {exerciseSevenFunction()};
+      function exerciseSevenFunction(){
+        var exercise = "Inchworms"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+
+  		document.getElementById("exerciseEight").innerHTML = "Squats"
+      document.getElementById("exerciseEight").onclick = function() {exerciseEightFunction()};
+      function exerciseEightFunction(){
+        var exercise = "Squats"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+
+
+  		document.getElementById("exerciseNine").innerHTML = "Russian Twist"
+  	 document.getElementById("exerciseNine").onclick = function() {exerciseNineFunction()};
+      function exerciseNineFunction(){
+        var exercise = "Russian Twist"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+
+    	document.getElementById("exerciseTen").innerHTML = "Toe Touches"
+      document.getElementById("exerciseTen").onclick = function() {exerciseTenFunction()};
+      function exerciseTenFunction(){
+        var exercise = "Toe Touches"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+
+  		document.getElementById("exerciseEleven").innerHTML = "Single Leg Raises"
+      document.getElementById("exerciseEleven").onclick = function() {exerciseElevenFunction()};
+      function exerciseElevenFunction(){
+        var exercise = "Single Leg Raises"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+  		document.getElementById("exerciseTwelve").innerHTML = "Push-Ups"
+      document.getElementById("exerciseTwelve").onclick = function() {exerciseTwelveFunction()};
+      function exerciseTwelveFunction(){
+        var exercise = "Push-Ups"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+
+  		document.getElementById("exerciseThirteen").innerHTML = "Triceps On Chair"
+      document.getElementById("exerciseThirteen").onclick = function() {exerciseThirteenFunction()};
+      function exerciseThirteenFunction(){
+        var exercise = "Triceps on Chair"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+  		document.getElementById("exerciseFourteen").innerHTML = "Plank"
+      document.getElementById("exerciseFourteen").onclick = function() {exerciseFourteenFunction()};
+      function exerciseFourteenFunction(){
+        var exercise = "Plank"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+  		document.getElementById("exerciseFifteen").innerHTML = "Fire Hyrdant"
+      document.getElementById("exerciseFifteen").onclick = function() {exerciseFifteenFunction()};
+      function exerciseFifteenFunction(){
+        var exercise = "Fire Hydrant"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+
+  		document.getElementById("exerciseSixteen").innerHTML = "Diamond Push-Up"
+      document.getElementById("exerciseSixteen").onclick = function() {exerciseSixteenFunction()};
+      function exerciseSixteenFunction(){
+        var exercise = "Diamond Push-Up"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+  		document.getElementById("exerciseSeventeen").innerHTML = "Calf Raises"
+      document.getElementById("exerciseSeventeen").onclick = function() {exerciseSeventeenFunction()};
+      function exerciseSeventeenFunction(){
+        var exercise = "Calf Raises"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+  		document.getElementById("exerciseEighteen").innerHTML = "Up-Downs"
+      document.getElementById("exerciseEighteen").onclick = function() {exerciseEighteenFunction()};
+      function exerciseEighteenFunction(){
+        var exercise = "Up-Downs"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+  		document.getElementById("exerciseNineteen").innerHTML = "Hip Raises"
+document.getElementById("exerciseNineteen").onclick = function() {exerciseNineteenFunction()};
+      function exerciseNineteenFunction(){
+        var exercise = "Hip Raises"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+	document.getElementById("exerciseTwenty").innerHTML = "Skier Jumps"
+  document.getElementById("exerciseTwenty").onclick = function() {exerciseTwentyFunction()};
+      function exerciseTwentyFunction(){
+        var exercise = "Skier Jumps"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+  		document.getElementById("exerciseTone").innerHTML = "Mountain Climbers"
+      document.getElementById("exerciseTone").onclick = function() {exerciseToneFunction()};
+      function exerciseToneFunction(){
+        var exercise = "Mountain Climbers"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter); 
+}
+
+  		document.getElementById("exerciseTtwo").innerHTML = "Lunges"
+      document.getElementById("exerciseTtwo").onclick = function() {exerciseTtwoFunction()};
+      function exerciseTtwoeFunction(){
+        var exercise = "Lunges"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+  		document.getElementById("exerciseTthree").innerHTML = "Hip Raises"
+      document.getElementById("exerciseTthree").onclick = function() {exerciseTthreeFunction()};
+        function exerciseTthree(){
+        var exercise = "Hipe Raises"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
+}
+
+  		document.getElementById("exerciseTfour").innerHTML = "Curtsy Lunges"  
+      document.getElementById("exerciseTfour").onclick = function() {exerciseTfourFunction()};
+        function exerciseTfour(){
+        var exercise = "Curtsy Lunges"
+        finalExercise.push(exercise);
+        console.log(exercise);
+        console.log(finalExercise);
+        counter++;
+        console.log(counter);
     }
 
     document.getElementById("upperBody").onclick = function() {upperBodyFunction()};
@@ -170,12 +369,34 @@ document.getElementById("situpBody").onclick = function() {situpBodyFunction()};
     }
 
 
+
+
+   document.getElementById("startButtonThree").onclick = function() {startButtonThreeFunction()};
+    function startButtonThreeFunction() {
+      $(".one").hide();
+      $(".two").show();   
+      cardAmount = 39;
+    }
+
+
+
+exerciseSuits.hearts = finalExercise[0]
+exerciseSuits.diams = finalExercise[1]
+exerciseSuits.clubs = finalExercise[2]
+exerciseSuits.spades = finalExercise[3]
+console.log(exerciseSuits);
+
+
 document.getElementById("startWorkout").onclick = function() {startWorkoutFunction()};
   	function startWorkoutFunction() {
   		$(".three").hide();
   		document.getElementById("startWorkout").innerHTML = "Next Exercise"
   		$(".finalText").hide();  
     }
+
+
+
+
 
 
 var suits = [ "hearts", "diams", "clubs", "spades" ];
@@ -247,6 +468,12 @@ function makeCard( suit, rank ) {
   
   card.find(".rank").html(rank);
  
+exerciseSuits.hearts = finalExercise[0]
+exerciseSuits.diams = finalExercise[1]
+exerciseSuits.clubs = finalExercise[2]
+exerciseSuits.spades = finalExercise[3]
+console.log(exerciseSuits);
+
   if (rank === 2) {$("#textInfo").html("Complete TWO repetitions of");}
   if (rank === 3) {$("#textInfo").html("Complete THREE repetitions of");}
   if (rank === 4) {$("#textInfo").html("Complete FOUR repetitions of");}
@@ -257,10 +484,15 @@ function makeCard( suit, rank ) {
   if (rank === 9) {$("#textInfo").html("Complete NINE repetitions of");}
   if (rank === 'A') {$("#textInfo").html("Complete ELEVEN repeitions of");}
   if (rank === 10 || rank === 'J' || rank === 'Q' || rank === 'K') {$("#textInfo").html("Complete TEN repetitions of");}
-  if (suit === 'hearts') {$("#textInfoTwo").html("HEARTS");}
-  if (suit === 'diams') {$("#textInfoTwo").html("DIAMONDS");}
-  if (suit === 'clubs') {$("#textInfoTwo").html("CLUBS");}
-  if (suit === 'spades') {$("#textInfoTwo").html("SPADES");}
+  if (suit === 'hearts') {$("#textInfoTwo").html(finalExercise[0]);}
+  if (suit === 'diams') {$("#textInfoTwo").html(finalExercise[1]);}
+  if (suit === 'clubs') {$("#textInfoTwo").html(finalExercise[2]);}
+  if (suit === 'spades') {$("#textInfoTwo").html(finalExercise[3]);}
+
+
+
+
+
 
   card.find(".suit").html("&"+suit+";");
   
