@@ -257,10 +257,10 @@ function makeCard( suit, rank ) {
   if (rank === 9) {$("#textInfo").html("Complete NINE repetitions of");}
   if (rank === 'A') {$("#textInfo").html("Complete ELEVEN repeitions of");}
   if (rank === 10 || rank === 'J' || rank === 'Q' || rank === 'K') {$("#textInfo").html("Complete TEN repetitions of");}
-  if (suit === 'hearts') {$("#textInfoTwo").html("HEARTS");}
-  if (suit === 'diams') {$("#textInfoTwo").html("DIAMONDS");}
-  if (suit === 'clubs') {$("#textInfoTwo").html("CLUBS");}
-  if (suit === 'spades') {$("#textInfoTwo").html("SPADES");}
+    if (suit === 'hearts') {$("#textInfoTwo").html(finalExercise[0]);}
+  if (suit === 'diams') {$("#textInfoTwo").html(finalExercise[1]);}
+  if (suit === 'clubs') {$("#textInfoTwo").html(finalExercise[2]);}
+  if (suit === 'spades') {$("#textInfoTwo").html(finalExercise[3]);}
 
   card.find(".suit").html("&"+suit+";");
   
