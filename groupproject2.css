@@ -158,7 +158,8 @@ h4 { color: #e60000;
 #lowerBody,
 #coreBody,
 #cardioBody,
-#xavierButton
+#xavierButton,
+#stop
 {
   background-color: hsl(0, 81%, 18%) !important;
   background-repeat: repeat-x;
