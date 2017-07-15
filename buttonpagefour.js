@@ -7,6 +7,7 @@ $(".two").hide();
 $(".model").hide();  
 $(".three").hide();  
 $(".four").hide(); 
+$("#gifs-appear-here").hide();
 
 
 var finalExercise = [];
@@ -40,11 +41,8 @@ var counter = 0;
 
     document.getElementById("xavierButton").onclick = function() {xavierButtonFunction()};
     function xavierButtonFunction() {
-
-       alert("This does work");
        $(".two").show(); 
-  /// need to add the hide function to this onclick - for some reason it crashes the page though //
-      
+       window.location.href="#move";
     }
 
 
@@ -349,8 +347,32 @@ var counter = 0;
   		$(".two").hide(); 
   		$(".three").show();
   		document.getElementById("exerciseOne").innerHTML = "Single Leg Raises"
+      document.getElementById("exerciseOne").onclick = function() {exerciseOneFunction()};
+      function exerciseOneFunction(){
+      var exercise = "Singe Leg Raises"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+      }
   		document.getElementById("exerciseTwo").innerHTML = "Tuck Jumps"
+      document.getElementById("exerciseTwo").onclick = function() {exerciseTwoFunction()};
+      function exerciseTwoFunction(){
+      var exercise = "Tuck Jumps"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+      }
   		document.getElementById("exerciseThree").innerHTML = "Curtsy Lunges"
+      document.getElementById("exerciseThree").onclick = function() {exerciseThreeFunction()};
+      function exerciseThreeFunction(){
+      var exercise = "Curtsy Lunges"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+      }
   		document.getElementById("exerciseFour").innerHTML = "Calf Raises"
   		document.getElementById("exerciseFive").innerHTML = "Lunges"
   		document.getElementById("exerciseSix").innerHTML = "Squats"  
@@ -363,11 +385,65 @@ var counter = 0;
   		$(".two").hide(); 
   		$(".three").show();
   		document.getElementById("exerciseOne").innerHTML = "Sit-Ups"
+      document.getElementById("exerciseOne").onclick = function() {exerciseOneFunction()};
+      function exerciseOneFunction(){
+      var exercise = "Sit-Ups"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
+     
   		document.getElementById("exerciseTwo").innerHTML = "V-Ups"
+      document.getElementById("exerciseTwo").onclick = function() {exerciseTwoFunction()};
+      function exerciseTwoFunction(){
+      var exercise = "V-Ups"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
+     
   		document.getElementById("exerciseThree").innerHTML = "Plank To Push"
+      document.getElementById("exerciseThree").onclick = function() {exerciseThreeFunction()};
+      function exerciseTfourFunction(){
+      var exercise = "Plank To Push"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
+     
   		document.getElementById("exerciseFour").innerHTML = "Toe Touches"
+      document.getElementById("exerciseFour").onclick = function() {exerciseFourFunction()};
+      function exerciseFourFunction(){
+      var exercise = "Toe Touches"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
+     
   		document.getElementById("exerciseFive").innerHTML = "Russian Twist"
+      document.getElementById("exerciseFive").onclick = function() {exerciseFiveFunction()};
+      function exerciseFiveFunction(){
+      var exercise = "Russian Twist"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
+     
   		document.getElementById("exerciseSix").innerHTML = "Burpees"
+      document.getElementById("exerciseSix").onclick = function() {exerciseSixFunction()};
+      function exerciseSixFunction(){
+      var exercise = "Burpees"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
+     
     	// situps, toe touches, Russian Twist, V-ups, plank,//
     }
 
@@ -377,14 +453,64 @@ var counter = 0;
   		$(".two").hide(); 
   		$(".three").show();
   		document.getElementById("exerciseOne").innerHTML = "Burpees"
+      document.getElementById("exerciseOne").onclick = function() {exerciseOneFunction()};
+      function exerciseOneFunction(){
+      var exercise = "Burpees"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
+     
   		document.getElementById("exerciseTwo").innerHTML = "Tuck Jumps"
+      document.getElementById("exerciseTwo").onclick = function() {exerciseTwoFunction()};
+      function exerciseTwoFunction(){
+      var exercise = "Tuck Jumps"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
+     
   		document.getElementById("exerciseThree").innerHTML = "Montain Climbers"
+      document.getElementById("exerciseThree").onclick = function() {exerciseThreeFunction()};
+      function exerciseThreeFunction(){
+      var exercise = "Mountain Climbers"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
+     
   		document.getElementById("exerciseFour").innerHTML = "Skier Jumps"
+      document.getElementById("exerciseFour").onclick = function() {exerciseFourFunction()};
+      function exerciseFourFunction(){
+      var exercise = "Skier Jumps"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
   		document.getElementById("exerciseFive").innerHTML = "Curtsy Lunges"
+      document.getElementById("exerciseFive").onclick = function() {exerciseFiveFunction()};
+      function exerciseFiveFunction(){
+      var exercise = "Curtsy Lunges"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
+    }
   		document.getElementById("exerciseSix").innerHTML = "Up-Downs"  
+      document.getElementById("exerciseSix").onclick = function() {exerciseSixFunction()};
+      function exerciseSixFunction(){
+      var exercise = "Up-Downs"
+        finalExercise.push(exercise);
+        counter++;
+        document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"
+         if (counter === 4) { $(".three").hide(); $("#stop").hide(); $(".four").show();}
     	// burpee's, //
     }
-
+}
 
 
 document.getElementById("startWorkout").onclick = function() {startWorkoutFunction()};
@@ -418,6 +544,7 @@ function init() {
             $("#textInfoTwo").hide();
             $("#cardHere").hide();
             $("#textInfo").html("You Smashed IT!!");
+            $("#gifs-appear-here").show();
               } // to close else
     
   });
