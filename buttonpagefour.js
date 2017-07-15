@@ -122,7 +122,7 @@ var counter = 0;
   		document.getElementById("exerciseEight").innerHTML = "Squats"
       document.getElementById("exerciseEight").onclick = function() {exerciseEightFunction()};
       function exerciseEightFunction(){
-        var exercise = "Squatss"
+        var exercise = "Squats"
         finalExercise.push(exercise);
         counter++;
         document.getElementById("exerciseNumber").innerHTML = "You have selected " + counter + " exercise(s)"

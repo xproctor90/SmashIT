@@ -7,8 +7,8 @@ $(document).ready(function() {
     var workouts = ["Smash IT"];
     
 //sets the type on the giphy search
-    var type = $(this).data('type');
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=dc6zaTOxFJmzC&limit=2";
+    
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + workouts + "&api_key=dc6zaTOxFJmzC&limit=2";
     $.ajax({url: queryURL, method: 'GET'})
      .done(function(response) {
          var results = response.data;
@@ -39,20 +39,4 @@ $(document).ready(function() {
 
 
 
-//$(document).ready(function() {
-
-  //  $(this).addClass('active');
-//sets the type on the giphy search
-   // var type = $(this).data('type');
-   // var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=dc6zaTOxFJmzC&limit=1";
-   // $.ajax({url: queryURL, method: 'GET'})
-   //  .done(function(response) {
-      //   var results = response.data;
-       //  var animated = results.images.fixed_height.url;
-       //  document.getElementById("#gifs-appear-here").innerHTML = '<center><img src = "'+animated+'"></center>';
-
-            
-        // });
-
-  //  });
 
